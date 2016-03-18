@@ -84,11 +84,15 @@ launcher_background_id = 1
 launcher_icon_size = 48
 launcher_tooltip = 1
 launcher_item_app = /usr/share/applications/google-chrome.desktop
-launcher_item_app = /usr/share/applications/unity-control-center.desktop
-launcher_item_app = /usr/share/applications/nautilus.desktop
-launcher_item_app = /usr/share/applications/ubuntu-tweak.desktop
-launcher_item_app = /usr/share/applications/shutter.desktop
 launcher_item_app = /usr/share/applications/gedit.desktop
+launcher_item_app = /usr/share/applications/nautilus.desktop
+launcher_item_app = /usr/share/applications/shutter.desktop
+launcher_item_app = /usr/share/applications/synaptic.desktop
+launcher_item_app = /usr/share/applications/session-properties.desktop
+launcher_item_app = /usr/share/applications/ubuntu-software-center.desktop
+launcher_item_app = /usr/share/applications/unity-control-center.desktop
 launcher_item_app = /usr/share/applications/update-manager.desktop
+launcher_item_app = /usr/share/applications/ubuntu-tweak.desktop
+launcher_item_app = /usr/share/applications/unity-tweak-tool.desktop
 
 # End of config
