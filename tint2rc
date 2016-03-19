@@ -94,5 +94,6 @@ launcher_item_app = /usr/share/applications/unity-control-center.desktop
 launcher_item_app = /usr/share/applications/update-manager.desktop
 launcher_item_app = /usr/share/applications/ubuntu-tweak.desktop
 launcher_item_app = /usr/share/applications/unity-tweak-tool.desktop
+launcher_item_app = /usr/share/applications/y-ppa-manager.desktop
 
 # End of config
