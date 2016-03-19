@@ -14,7 +14,7 @@ background_color = #e88f2e 50
 
 # Panel
 panel_items = LT
-panel_monitor = all
+panel_monitor = 3
 panel_position = bottom center horizontal
 panel_size = 100% 32
 panel_margin = -2 -1
