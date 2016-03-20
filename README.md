@@ -18,5 +18,5 @@
 
 
 ##Reference
-[Codeblocks Chinese (Traditional) translation](https://translations.launchpad.net/codeblocks/trunk/+pots/codeblocks/zh_TW/+translate)
-[ Colored Man Pages With less Command](http://www.cyberciti.biz/faq/linux-unix-colored-man-pages-with-less-command/)
+- [Codeblocks Chinese (Traditional) translation](https://translations.launchpad.net/codeblocks/trunk/+pots/codeblocks/zh_TW/+translate)
+- [Colored Man Pages With less Command](http://www.cyberciti.biz/faq/linux-unix-colored-man-pages-with-less-command/)
