@@ -1,0 +1,11 @@
+[user]
+	name = scps950707
+	email = scps950707@gmail.com
+[core]
+	editor = vim
+[push]
+	default = simple
+[alias]
+	co = commit
+	pu = push
+	st = status
