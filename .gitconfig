@@ -6,6 +6,22 @@
 [push]
 	default = simple
 [alias]
-	co = commit
+  # show log with SHA,message,date,user
+  l = log -10 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  # Show the diff between the latest commit and the current state
+  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+  # `git di $number` shows the diff between the state `$number` revisions ago and the current state
+  di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+  # Amend the currently staged files to the latest commit
+  amend = commit --amend --reuse-message=HEAD
+	c = commit -v
+  co = checkout
 	pu = push
-	st = status
+  st = status
+	s = status -s
+
+# rewrites of repo paths
+[url "git@github.com:"]
+  insteadOf = "hub:"
+[url "git@github.com:scps950707:"]
+  insteadOf = "myhub:"
