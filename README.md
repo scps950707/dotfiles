@@ -15,7 +15,13 @@
 |mcda|make clean dep all|
 |mc|make clean|
 |untar|tar xvf|
+|..|cd ..|
 
+##set up alias
+```sh
+cd ~
+ln -s -f ~/github/dotfiles/config/.* . 2>/dev/null
+```
 
 ##Reference
 - [Codeblocks Chinese (Traditional) translation](https://translations.launchpad.net/codeblocks/trunk/+pots/codeblocks/zh_TW/+translate)
