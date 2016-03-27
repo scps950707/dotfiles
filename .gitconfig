@@ -3,6 +3,8 @@
 	email = scps950707@gmail.com
 [core]
 	editor = vim
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
 [push]
 	default = simple
 [alias]
@@ -14,14 +16,18 @@
   di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
   # Amend the currently staged files to the latest commit
   amend = commit --amend --reuse-message=HEAD
+  # Find commits by commit message
+  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 	c = commit -v
   co = checkout
 	pu = push
   st = status
 	s = status -s
+  r = remote -v
+  unstage = reset HEAD
 
 # rewrites of repo paths
 [url "git@github.com:"]
   insteadOf = "hub:"
-[url "git@github.com:scps950707:"]
+[url "git@github.com:scps950707/"]
   insteadOf = "myhub:"
