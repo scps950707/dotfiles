@@ -17,7 +17,7 @@
 |untar|tar xvf|
 |..|cd ..|
 
-##set up alias
+##set dotfiles' link
 ```sh
 ln -s -f ~/github/dotfiles/config/.* ~ 2>/dev/null
 ```
