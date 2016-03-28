@@ -33,3 +33,5 @@
   insteadOf = "hub:"
 [url "git@github.com:scps950707/"]
   insteadOf = "myhub:"
+[github]
+	user = scps950707
