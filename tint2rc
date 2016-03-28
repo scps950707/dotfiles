@@ -34,6 +34,7 @@ wm_menu = 1
 panel_dock = 0
 panel_position = bottom center horizontal
 panel_layer = normal
+##Benq =1 Dell = 2,set primary monitor as Benq in unity-control-center display
 panel_monitor = 2
 primary_monitor_first = 0
 autohide = 0
