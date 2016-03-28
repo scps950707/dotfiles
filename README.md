@@ -19,8 +19,7 @@
 
 ##set up alias
 ```sh
-cd ~
-ln -s -f ~/github/dotfiles/config/.* . 2>/dev/null
+ln -s -f ~/github/dotfiles/config/.* ~ 2>/dev/null
 ```
 
 ##Reference
