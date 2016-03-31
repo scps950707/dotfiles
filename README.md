@@ -14,7 +14,6 @@
 |memcheckfull|valgrind --leak-check=full|
 |mcda|make clean dep all|
 |mc|make clean|
-|untar|tar xvf|
 |..|cd ..|
 
 ##set dotfiles' link
