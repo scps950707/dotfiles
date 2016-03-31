@@ -30,8 +30,8 @@
 
 # rewrites of repo paths
 [url "git@github.com:"]
-  insteadOf = "hub:"
+  insteadOf = "github:"
 [url "git@github.com:scps950707/"]
-  insteadOf = "myhub:"
+  insteadOf = "scps950707:"
 [github]
 	user = scps950707
