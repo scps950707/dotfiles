@@ -18,3 +18,4 @@ alias g='git'
 alias mv='mv -v'
 alias rm='rm -I -v'
 alias cp='cp -v'
+eval "$(thefuck --alias)"
