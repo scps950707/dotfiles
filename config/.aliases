@@ -18,4 +18,5 @@ alias g='git'
 alias mv='mv -v'
 alias rm='rm -I -v'
 alias cp='cp -v'
+alias dbox='nautilus ~/Dropbox/'
 eval "$(thefuck --alias)"
