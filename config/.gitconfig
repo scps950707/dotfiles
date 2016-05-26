@@ -27,6 +27,7 @@
 	s = status -s
   r = remote -v
   unstage = reset HEAD
+  b = branch
 
 # rewrites of repo paths
 [url "git@github.com:"]
