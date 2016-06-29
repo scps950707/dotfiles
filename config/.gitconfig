@@ -1,38 +1,38 @@
 [user]
-	name = scps950707
-	email = scps950707@gmail.com
+    name = scps950707
+    email = scps950707@gmail.com
 [core]
-	editor = vim
-  excludesfile = ~/.gitignore
-  attributesfile = ~/.gitattributes
+    editor = vim
+    excludesfile = ~/.gitignore
+    attributesfile = ~/.gitattributes
 [push]
-	default = simple
+    default = simple
 [alias]
   # show log with SHA,message,date,user
-  l = log -10 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    l = log -10 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   # Show the diff between the latest commit and the current state
-  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+    d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
   # `git di $number` shows the diff between the state `$number` revisions ago and the current state
-  di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+    di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
   # Amend the currently staged files to the latest commit
-  amend = commit --amend --reuse-message=HEAD
+    amend = commit --amend --reuse-message=HEAD
   # Find commits by commit message
-  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+    fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
   # Pull in remote changes for the current repository and all its submodules
-  p = !"git pull; git submodule foreach git pull origin master"
-	c = commit -v
-  co = checkout
-	pu = push
-  st = status
-	s = status -s
-  r = remote -v
-  unstage = reset HEAD
-  b = branch
+    p = !"git pull; git submodule foreach git pull origin master"
+    c = commit -v
+    co = checkout
+    pu = push
+    st = status
+    s = status -s
+    r = remote -v
+    unstage = reset HEAD
+    b = branch
 
 # rewrites of repo paths
 [url "git@github.com:"]
-  insteadOf = "github:"
+    insteadOf = "github:"
 [url "git@github.com:scps950707/"]
-  insteadOf = "scps950707:"
+    insteadOf = "scps950707:"
 [github]
-	user = scps950707
+    user = scps950707
