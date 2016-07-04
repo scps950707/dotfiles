@@ -7,12 +7,8 @@ import ycm_core
 BASE_FLAGS = [
     '-Wall',
     '-Wextra',
-    '-Werror',
-    '-Wno-long-long',
-    '-Wno-variadic-macros',
     '-fexceptions',
     '-ferror-limit=10000',
-    '-DNDEBUG',
     '-std=c++11',
     '-xc++',
     '-I/usr/lib/'
