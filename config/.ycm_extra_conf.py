@@ -11,8 +11,9 @@ BASE_FLAGS = [
     '-ferror-limit=10000',
     '-std=c++11',
     '-xc++',
-    '-I/usr/lib/'
-    '-I/usr/include/'
+    '-isystem/usr/lib/',
+    '-isystem/usr/include/',
+    '-isystem/usr/include/c++/4.8'
 ]
 
 SOURCE_EXTENSIONS = [
