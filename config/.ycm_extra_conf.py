@@ -13,7 +13,7 @@ BASE_FLAGS = [
     '-xc++',
     '-isystem/usr/lib/',
     '-isystem/usr/include/',
-    '-isystem/usr/include/c++/4.8'
+    '-isystem/usr/include/c++/5.4.0'
 ]
 
 SOURCE_EXTENSIONS = [
