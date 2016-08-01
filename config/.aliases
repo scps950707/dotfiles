@@ -24,3 +24,4 @@ alias inithook='cd `git rev-parse --show-toplevel` && rm -rf .git/hooks/* && git
 alias magit='vim -c MagitOnly'
 alias tint2re='killall -USR1 tint2'
 alias bdfolder='rm -rf build && mkdir build && cd build'
+alias styleall='astyle --suffix=none `find . -regex ".*\.[ch]p*p*$"`'
