@@ -1,40 +1,96 @@
+# ==========================================================================
+# Author:         scps950707
+# Email:          scps950707@gmail.com
+# Created:        2016-03-27 00:00
+# Last Modified:  2016-08-03 11:36
+# Filename:       .functions
+# ==========================================================================
+
 function extract
 {
-  if [ -z "$1" ]; then
-    # display usage if no parameters given
-    echo "Usage: extract [archive name] [folder PATH]"
-  else
-    if [ -f $1 ] ; then
-      prevDir=${PWD}
-      if [ -z "$2" ]; then
-        archive=$1
-      else
-        mkdir -p $2 && cd $2
-        archive=$prevDir/$1
-      fi
-      case $1 in
-        *.tar.bz2)   tar xvjf    $archive    ;;
-        *.tar.gz)    tar xvzf    $archive    ;;
-        *.tar.xz)    tar xvJf    $archive    ;;
-        *.lzma)      unlzma      $archive    ;;
-        *.bz2)       bunzip2     $archive    ;;
-        *.rar)       unrar x -ad $archive    ;;
-        *.gz)        gunzip      $archive    ;;
-        *.tar)       tar xvf     $archive    ;;
-        *.tbz2)      tar xvjf    $archive    ;;
-        *.tgz)       tar xvzf    $archive    ;;
-        *.zip)       unzip       $archive    ;;
-        *.Z)         uncompress  $archive    ;;
-        *.7z)        7z x        $archive    ;;
-        *.xz)        unxz        $archive    ;;
-        *)           echo "extract: '$1' - unknown archive method" ;;
-      esac
-      # go back to previous directory
-      if ! [ -z "$2" ]; then
-        cd $prevDir
-      fi
+    if [ -z "$1" ]; then
+        # display usage if no parameters given
+        echo "Usage: extract [archive name] [folder PATH]"
     else
-      echo "$1 - file does not exist"
+        if [ -f $1 ] ; then
+            prevDir=${PWD}
+            if [ -z "$2" ]; then
+                archive=$1
+            else
+                mkdir -p $2 && cd $2
+                archive=$prevDir/$1
+            fi
+            case $1 in
+                *.tar.bz2)   tar xvjf    $archive    ;;
+                *.tar.gz)    tar xvzf    $archive    ;;
+                *.tar.xz)    tar xvJf    $archive    ;;
+                *.lzma)      unlzma      $archive    ;;
+                *.bz2)       bunzip2     $archive    ;;
+                *.rar)       unrar x -ad $archive    ;;
+                *.gz)        gunzip      $archive    ;;
+                *.tar)       tar xvf     $archive    ;;
+                *.tbz2)      tar xvjf    $archive    ;;
+                *.tgz)       tar xvzf    $archive    ;;
+                *.zip)       unzip       $archive    ;;
+                *.Z)         uncompress  $archive    ;;
+                *.7z)        7z x        $archive    ;;
+                *.xz)        unxz        $archive    ;;
+                *)           echo "extract: '$1' - unknown archive method" ;;
+            esac
+            # go back to previous directory
+            if ! [ -z "$2" ]; then
+                cd $prevDir
+            fi
+        else
+            echo "$1 - file does not exist"
+        fi
     fi
-fi
 }
+
+
+function initGitHooks
+{
+    gitHookFolder=~/github/git-hook
+    hookFolder=hook
+    check=1
+    git rev-parse --git-dir > /dev/null 2>&1
+    if [ $? = 0 ]; then
+        if [ ! -e $gitHookFolder ];then
+            echo "git hooks template folder not exist"
+            check=0
+        elif [ ! -e $gitHookFolder/pre-commit ];then
+            echo "$gitHookFolder/pre-commit not exist"
+            check=0
+        elif [ ! -e $gitHookFolder/pre-commit.d ];then
+            echo "$gitHookFolder/pre-commit.d not exist"
+            check=0
+        fi
+    else
+        echo "Not in git repository"
+        check=0
+    fi
+
+    if [ $check -eq 1 ]; then
+        cd `git rev-parse --show-toplevel`
+        mkdir -p $hookFolder
+        mkdir -p $hookFolder/pre-commit.d
+        cp $gitHookFolder/pre-commit $hookFolder
+        echo
+        echo "hook list:"
+        ls $gitHookFolder/pre-commit.d
+        echo
+        for defaultHook in $gitHookFolder/pre-commit.d/*
+        do
+            read -r -p "Add `basename $defaultHook` ? [y/N] " response
+            if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+                cp $defaultHook $hookFolder/pre-commit.d/
+            fi
+        done
+        echo "current hooks:"
+        echo
+        tree $hookFolder
+    fi
+}
+
+
+# vim: ft=sh
