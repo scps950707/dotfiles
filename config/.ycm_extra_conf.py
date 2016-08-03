@@ -13,7 +13,9 @@ BASE_FLAGS = [
     '-xc++',
     '-isystem/usr/lib/',
     '-isystem/usr/include/',
-    '-isystem/usr/include/c++/5.4.0'
+    '-isystem/usr/include/c++/5',
+    '-I/usr/local/include/opencv',
+    '-I/usr/local/include'
 ]
 
 SOURCE_EXTENSIONS = [
