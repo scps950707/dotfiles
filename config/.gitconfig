@@ -5,6 +5,7 @@
     editor = vim
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
+    hooksPath = hook
 [push]
     default = simple
 [alias]
@@ -37,5 +38,3 @@
     insteadOf = "scps950707:"
 [github]
     user = scps950707
-[init]
-	templatedir = ~/.gitTemplate/
