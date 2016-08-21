@@ -2,7 +2,7 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-03-27 00:00
-# Last Modified:  2016-08-03 11:39
+# Last Modified:  2016-08-21 12:10
 # Filename:       .aliases
 # ==========================================================================
 
@@ -31,5 +31,4 @@ alias dbox='nautilus ~/Dropbox/'
 alias listhook='(cd `git rev-parse --show-toplevel` && tree `git config core.hooksPath`)'
 alias magit='vim -c MagitOnly'
 alias tint2re='killall -USR1 tint2'
-alias bdfolder='rm -rf build && mkdir build && cd build'
 alias styleall='astyle --suffix=none `find . -regex ".*\.[ch]p*p*$"`'

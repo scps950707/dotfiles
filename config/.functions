@@ -2,7 +2,7 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-03-27 00:00
-# Last Modified:  2016-08-03 11:36
+# Last Modified:  2016-08-21 12:10
 # Filename:       .functions
 # ==========================================================================
 
@@ -92,5 +92,19 @@ function initGitHooks
     fi
 }
 
+
+function bdfolder
+{
+    folder_name=${PWD##*/}
+    build_folder='build'
+    if [ $folder_name == $build_folder ]; then
+        cd ..
+    fi
+    rm -rf $build_folder
+    mkdir $build_folder
+    cd $build_folder
+    cmake ..
+    make
+}
 
 # vim: ft=sh
