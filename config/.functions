@@ -2,7 +2,7 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-03-27 00:00
-# Last Modified:  2016-08-21 12:10
+# Last Modified:  2016-09-10 22:54
 # Filename:       .functions
 # ==========================================================================
 
@@ -104,7 +104,7 @@ function bdfolder
     mkdir $build_folder
     cd $build_folder
     cmake ..
-    make
+    make -j4
 }
 
 # vim: ft=sh
