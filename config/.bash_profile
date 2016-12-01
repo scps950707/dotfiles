@@ -80,4 +80,4 @@ fi
 eval "$(thefuck --alias)"
 
 # opencv linkers
-export CVLIBS=`pkg-config --cflags --libs opencv`
+# export CVLIBS=`pkg-config --cflags --libs opencv`
