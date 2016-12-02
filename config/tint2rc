@@ -138,7 +138,6 @@ launcher_item_app = /usr/share/applications/unity-control-center.desktop
 launcher_item_app = /usr/share/applications/gnome-system-monitor.desktop
 launcher_item_app = /usr/share/applications/update-manager.desktop
 launcher_item_app = /usr/share/applications/ubuntu-tweak.desktop
-launcher_item_app = /usr/share/applications/session-properties.desktop
 launcher_item_app = /usr/share/applications/kazam.desktop
 launcher_item_app = /usr/share/applications/transmission-gtk.desktop
 
