@@ -79,5 +79,4 @@ fi
 #https://github.com/nvbn/thefuck
 eval "$(thefuck --alias)"
 
-# opencv linkers
-# export CVLIBS=`pkg-config --cflags --libs opencv`
+export HISTTIMEFORMAT='%F %T '
