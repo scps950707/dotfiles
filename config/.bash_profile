@@ -47,7 +47,7 @@ fi
 
 
 # this is script for autojump
-[[ -s /home/scps950707/.autojump/etc/profile.d/autojump.sh ]] && source /home/scps950707/.autojump/etc/profile.d/autojump.sh
+. /usr/share/autojump/autojump.sh
 
 
 # make manual page colorful
