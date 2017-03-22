@@ -1,36 +1,59 @@
-#dotfiles
+# Dotfiles
 
+## Structure
+```
+.
+|-- backup
+|   |-- .bash_logout
+|   |-- .bashrc
+|   |-- compiz.profile
+|   `-- .profile
+|-- config
+|   |-- .aliases
+|   |-- .astylerc
+|   |-- .bash_profile
+|   |-- .bash_prompt
+|   |-- .bashrc
+|   |-- .dircolors
+|   |-- .functions
+|   |-- .gitattributes
+|   |-- .gitconfig
+|   |-- .gitignore
+|   |-- tint2rc
+|   `-- .ycm_extra_conf.py
+|-- hook
+|   |-- pre-commit
+|   `-- pre-commit.d
+|       |-- readme.hook
+|       `-- timestamp.hook
+|-- makefile
+|-- README.md
+`-- readme.sh
+```
 
-##codeblocks(windows)
-|setting|file|location|
-|----------|-----|----------|
-|settings|codeblocks.mo|C:\Program Files (x86)\CodeBlocks\share\CodeBlocks\locale\zh_TW|
-|translation-zh|default.conf|C:\Users\scps950707\AppData\Roaming\CodeBlocks|
-
-##alias
+## Alias
 |alias|target|
-|------|---------|
+|-----|------|
+|ll|ls -alF|
+|la|ls -A|
+|l|ls -CF|
 |memcheck|valgrind --leak-check=yes|
 |memcheckfull|valgrind --leak-check=full|
 |mcda|make clean dep all|
 |mc|make clean|
+|mca|make clean all|
 |..|cd ..|
+|n|nautilus|
+|g|git|
+|mv|mv -v|
+|rm|rm -I -v|
+|cp|cp -v|
+|dbox|nautilus ~/Dropbox/|
+|listhook|(cd `git rev-parse --show-toplevel` && tree `git config core.hooksPath`)|
+|magit|vim -c MagitOnly|
+|styleall|astyle --suffix=none `find . -regex ".*\.[ch]p*p*$"`|
 
-##set dotfiles' link
-```sh
-ln -s -f ~/github/dotfiles/config/.* ~ 2>/dev/null
-```
-
-##tint2:panel_monitor
-- Benq =1 Dell = 2,set primary monitor as Benq in unity-control-center display
-
-
-##Reference
-- [Codeblocks Chinese (Traditional) translation](https://translations.launchpad.net/codeblocks/trunk/+pots/codeblocks/zh_TW/+translate)
-- [Colored Man Pages With less Command](http://www.cyberciti.biz/faq/linux-unix-colored-man-pages-with-less-command/)
-
-
-##Astyle Details
+## Astyle Details
 
 - Bracket Style Options
 [--style=allman / --style=bsd / --style=break / -A1](http://astyle.sourceforge.net/astyle.html#_style=allman)
@@ -43,3 +66,9 @@ ln -s -f ~/github/dotfiles/config/.* ~ 2>/dev/null
 [--align-pointer=name   / -k3](http://astyle.sourceforge.net/astyle.html#_align-pointer)
 [--align-reference=name   / -W3](http://astyle.sourceforge.net/astyle.html#_align-reference)
 [--add-brackets / -j](http://astyle.sourceforge.net/astyle.html#_add-brackets)
+
+## Reference
+- [Colored Man Pages With less Command](http://www.cyberciti.biz/faq/linux-unix-colored-man-pages-with-less-command/)
+- [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+- [trapd00r/LS_COLORS](https://github.com/trapd00r/LS_COLORS)
+
