@@ -1,3 +1,7 @@
+# Switch to ZSH shell
+if test -t 1; then
+    exec zsh
+fi
 
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
