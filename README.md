@@ -20,7 +20,9 @@
 |   |-- .gitconfig
 |   |-- .gitignore
 |   |-- tint2rc
-|   `-- .ycm_extra_conf.py
+|   |-- .tmux.conf
+|   |-- .ycm_extra_conf.py
+|   `-- .zshrc
 |-- hook
 |   |-- pre-commit
 |   `-- pre-commit.d
@@ -34,9 +36,10 @@
 ## Alias
 |alias|target|
 |-----|------|
-|ll|ls -alF|
-|la|ls -A|
-|l|ls -CF|
+|ll|ls -lFh| #size,show type,human readable
+|la|ls -lAFh| #long list,show almost all,show type,human readable
+|l|ls -lFh| #size,show type,human readable
+|ldot|ls -ld .*|
 |memcheck|valgrind --leak-check=yes|
 |memcheckfull|valgrind --leak-check=full|
 |mcda|make clean dep all|
