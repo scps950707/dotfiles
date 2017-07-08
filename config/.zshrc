@@ -1,3 +1,9 @@
+# Load the shell dotfiles:
+for file in ~/.{aliases,functions}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -83,12 +89,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-
-# Load the shell dotfiles:
-for file in ~/.{aliases,functions,wslrc}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
 
 
 # make manual page colorful
