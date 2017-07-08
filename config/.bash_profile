@@ -1,3 +1,8 @@
+# Switch to ZSH shell
+if test -t 1; then
+    exec zsh
+fi
+
 # Load the shell dotfiles:
 for file in ~/.{bash_prompt,aliases,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
