@@ -1,6 +1,6 @@
-# Switch to ZSH shell
-if test -t 1; then
-    exec zsh
+# tmux
+if command -v tmux>/dev/null; then
+    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux -2
 fi
 
 # Load the shell dotfiles:
