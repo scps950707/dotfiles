@@ -1,5 +1,5 @@
 # Load the shell dotfiles:
-for file in ~/.{aliases,functions}; do
+for file in ~/.{aliases,functions,wslrc}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
