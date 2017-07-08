@@ -3,16 +3,9 @@ if test -t 1; then
     exec zsh
 fi
 
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-if [ -d "/mnt/c/Program Files/wkhtmltopdf/bin" ] ; then
-    PATH="/mnt/c/Program Files/wkhtmltopdf/bin:$PATH"
-fi
 
 # Load the shell dotfiles:
-for file in ~/.{bash_prompt,aliases,functions}; do
+for file in ~/.{bash_prompt,aliases,functions,wslrc}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -93,4 +86,3 @@ fi
 eval "$(thefuck --alias)"
 
 export HISTTIMEFORMAT='%F %T '
-export DISPLAY=127.0.0.1:0.0
