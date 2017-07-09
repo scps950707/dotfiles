@@ -1,10 +1,13 @@
 # Load the shell dotfiles:
-for file in ~/.{aliases,functions,wslrc}; do
+dotfiles=(~/.{aliases,functions})
+if grep -q Microsoft /proc/version; then
+    dotfiles+=(~/.wslrc)
+fi
+for file in "${dotfiles[@]}"; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
-
-# autojump issue 474
-unsetopt BG_NICE
+unset file
+unset dotfiles
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH

@@ -6,3 +6,9 @@ if [ -d "/mnt/c/Program Files/wkhtmltopdf/bin" ] ; then
     PATH="/mnt/c/Program Files/wkhtmltopdf/bin:$PATH"
 fi
 export DISPLAY=127.0.0.1:0.0
+if [ -n "$ZSH_VERSION" ]; then
+    # autojump issue 474
+    unsetopt BG_NICE
+fi
+
+# vim:ft=sh

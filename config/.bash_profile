@@ -5,10 +5,15 @@ fi
 
 
 # Load the shell dotfiles:
-for file in ~/.{bash_prompt,aliases,functions,wslrc}; do
+dotfiles=(~/.{aliases,bash_prompt,functions})
+if grep -q Microsoft /proc/version; then
+    dotfiles+=(~/.wslrc)
+fi
+for file in "${dotfiles[@]}"; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+unset dotfiles
 
 # If not running interactively, don't do anything
 case $- in
