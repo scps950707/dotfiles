@@ -1,7 +1,6 @@
 # tmux
-if command -v zsh>/dev/null 2>&1; then
-    export SHELL=$(which zsh)
-    exec zsh
+if command -v tmux>/dev/null 2>&1; then
+    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux -2
 fi
 
 
