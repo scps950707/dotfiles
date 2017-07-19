@@ -21,7 +21,6 @@
 |   |-- .gitignore
 |   |-- tint2rc
 |   |-- .tmux.conf
-|   |-- .wslrc
 |   |-- .ycm_extra_conf.py
 |   `-- .zshrc
 |-- hook
