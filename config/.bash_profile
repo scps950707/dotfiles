@@ -1,19 +1,32 @@
+# Load special config in wsl
+if grep -q Microsoft /proc/version; then
+# https://github.com/Microsoft/BashOnWindows/issues/2148
+# Bash doesn't set PATH correctly so we need to set here
+# because powerline statusline for tmux needs to execute
+# "powerline-config" which located in "~/.local/bin"
+    if [ -d "$HOME/.local/bin" ] ; then
+        export PATH="$HOME/.local/bin:$PATH"
+    fi
+
+    if [ -d "/mnt/c/Program Files/wkhtmltopdf/bin" ] ; then
+        export PATH="/mnt/c/Program Files/wkhtmltopdf/bin:$PATH"
+    fi
+    export DISPLAY=127.0.0.1:0.0
+fi
+
+
+# Load the shell dotfiles
+for file in ~/.{aliases,bash_prompt,functions}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
+
 # tmux
 if command -v tmux>/dev/null 2>&1; then
     [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux -2
 fi
 
-
-# Load the shell dotfiles:
-dotfiles=(~/.{aliases,bash_prompt,functions})
-if grep -q Microsoft /proc/version; then
-    dotfiles+=(~/.wslrc)
-fi
-for file in "${dotfiles[@]}"; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
-unset dotfiles
 
 # If not running interactively, don't do anything
 case $- in

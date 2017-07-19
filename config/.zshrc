@@ -1,13 +1,7 @@
-# Load the shell dotfiles:
-dotfiles=(~/.{aliases,functions})
+# https://github.com/Microsoft/BashOnWindows/issues/1887
 if grep -q Microsoft /proc/version; then
-    dotfiles+=(~/.wslrc)
+    unsetopt BG_NICE
 fi
-for file in "${dotfiles[@]}"; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file
-unset dotfiles
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
