@@ -91,3 +91,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+if grep -q Microsoft /proc/version; then
+    # wsl serve dir as OTHER_WRITABLE, use cyan and bold
+    export LS_COLORS=$LS_COLORS"ow=01;34:"
+fi

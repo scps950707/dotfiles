@@ -23,7 +23,6 @@
 |   |-- .tmux.conf
 |   |-- .ycm_extra_conf.py
 |   `-- .zshrc
-|-- dircolors.256dark
 |-- hook
 |   |-- pre-commit
 |   `-- pre-commit.d
