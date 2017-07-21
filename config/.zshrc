@@ -1,5 +1,7 @@
 # https://github.com/Microsoft/BashOnWindows/issues/1887
 if grep -q Microsoft /proc/version; then
+    # wsl serve dir as OTHER_WRITABLE, use cyan and bold
+    export LS_COLORS=$LS_COLORS"ow=01;34:"
     unsetopt BG_NICE
 fi
 
@@ -92,9 +94,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if grep -q Microsoft /proc/version; then
-    # wsl serve dir as OTHER_WRITABLE, use cyan and bold
-    export LS_COLORS=$LS_COLORS"ow=01;34:"
-fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
