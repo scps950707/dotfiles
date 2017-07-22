@@ -14,6 +14,9 @@ if grep -q Microsoft /proc/version; then
     export DISPLAY=127.0.0.1:0.0
 fi
 
+export FZF_DEFAULT_OPTS='--height 50% --reverse --border'
+export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
 # Load the shell dotfiles
 for file in ~/.{aliases,bash_prompt,functions}; do
