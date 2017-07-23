@@ -7,10 +7,6 @@ if grep -q Microsoft /proc/version; then
     if [ -d "$HOME/.local/bin" ] ; then
         export PATH="$HOME/.local/bin:$PATH"
     fi
-
-    if [ -d "/mnt/c/Program Files/wkhtmltopdf/bin" ] ; then
-        export PATH="/mnt/c/Program Files/wkhtmltopdf/bin:$PATH"
-    fi
     export DISPLAY=127.0.0.1:0.0
 fi
 
