@@ -96,3 +96,8 @@ source $ZSH/oh-my-zsh.sh
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Fix home and end key in zsh
+# https://stackoverflow.com/a/33049500
+bindkey  "^[[1~"   beginning-of-line
+bindkey  "^[[4~"   end-of-line
