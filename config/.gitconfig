@@ -38,3 +38,5 @@
     insteadOf = "scps950707:"
 [github]
     user = scps950707
+[color]
+	ui = auto
