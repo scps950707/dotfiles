@@ -61,7 +61,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras autojump thefuck pip extract colored-man-pages zsh-syntax-highlighting)
+plugins=(git git-extras autojump thefuck pip extract colored-man-pages zsh-syntax-highlighting zsh-completions zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,6 +94,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Load the shell dotfiles
+for file in ~/.{aliases,functions}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
