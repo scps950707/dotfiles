@@ -19,7 +19,6 @@
 |   |-- .gitattributes
 |   |-- .gitconfig
 |   |-- .gitignore
-|   |-- tint2rc
 |   |-- .tmux.conf
 |   |-- .ycm_extra_conf.py
 |   `-- .zshrc
