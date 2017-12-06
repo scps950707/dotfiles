@@ -54,6 +54,7 @@
 |listhook|(cd `git rev-parse --show-toplevel` && tree `git config core.hooksPath`)|
 |magit|vim -c MagitOnly|
 |styleall|astyle --suffix=none `find . -regex ".*\.[ch]p*p*$"`|
+|findn|find . -name|
 
 ## Astyle Details
 
