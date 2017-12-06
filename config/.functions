@@ -2,7 +2,7 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-03-27 00:00
-# Last Modified:  2017-11-07 14:28
+# Last Modified:  2017-12-06 14:22
 # Filename:       .functions
 # ==========================================================================
 
@@ -98,7 +98,7 @@ function bdfolder
 {
     folder_name=${PWD##*/}
     build_folder='build'
-    if [ $folder_name == $build_folder ]; then
+    if [ $folder_name = $build_folder ]; then
         cd ..
     fi
     rm -rf $build_folder
