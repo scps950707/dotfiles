@@ -13,8 +13,7 @@ BASE_FLAGS = [
     '-xc++',
     '-isystem/usr/lib/',
     '-isystem/usr/include/',
-    '-isystem/usr/include/c++/5',
-    '-I/usr/local/include/opencv',
+    '-isystem/usr/include/c++/7',
     '-I/usr/local/include'
 ]
 
