@@ -49,12 +49,11 @@ zplug load
 HIST_STAMPS="mm/dd/yyyy"
 
 # Load the shell dotfiles
-for file in ~/.{aliases,functions}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
+[ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.functions ] && source ~/.functions
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # Fix home and end key in zsh
 # https://stackoverflow.com/a/33049500

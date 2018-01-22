@@ -14,11 +14,12 @@ export FZF_DEFAULT_OPTS='--height 50% --reverse --border'
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
+[ -f ~/.bashrc.local ] && source ~/.bashrc.local
+
 # Load the shell dotfiles
-for file in ~/.{aliases,bash_prompt,functions}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
+[ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.bash_prompt ] && source ~/.bash_prompt
+[ -f ~/.functions ] && source ~/.functions
 
 
 # tmux
