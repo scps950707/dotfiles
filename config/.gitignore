@@ -3,6 +3,8 @@ tags
 
 # vim swap files
 *.swp
+# vim session
+Session.vim
 
 # YCM
 .ycm_extra_conf.py
