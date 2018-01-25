@@ -1,3 +1,5 @@
+##### Variables needed for both bash and zsh in tmux
+
 # Load special config in wsl
 if grep -q Microsoft /proc/version; then
 # https://github.com/Microsoft/BashOnWindows/issues/2148
@@ -13,6 +15,13 @@ fi
 export FZF_DEFAULT_OPTS='--height 50% --reverse --border'
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
+#####
+
+
+# tmux
+if command -v tmux>/dev/null 2>&1; then
+    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux -2
+fi
 
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
 
@@ -21,11 +30,6 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 [ -f ~/.bash_prompt ] && source ~/.bash_prompt
 [ -f ~/.functions ] && source ~/.functions
 
-
-# tmux
-if command -v tmux>/dev/null 2>&1; then
-    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux -2
-fi
 
 
 # If not running interactively, don't do anything
