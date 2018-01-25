@@ -29,7 +29,8 @@
 |       `-- timestamp.hook
 |-- makefile
 |-- README.md
-`-- readme.sh
+|-- readme.sh
+`-- Session.vim
 ```
 
 ## Alias

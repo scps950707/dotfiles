@@ -54,6 +54,7 @@ HIST_STAMPS="mm/dd/yyyy"
 [ -f ~/.functions ] && source ~/.functions
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+bindkey '^P' fzf-file-widget
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # Fix home and end key in zsh
