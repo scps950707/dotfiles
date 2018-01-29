@@ -12,6 +12,8 @@ fi
 
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # Load the shell dotfiles
 [ -f ~/.aliases ] && source ~/.aliases
 [ -f ~/.bash_prompt ] && source ~/.bash_prompt
