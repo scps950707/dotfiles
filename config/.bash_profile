@@ -1,17 +1,4 @@
 ##### Variables needed for both bash and zsh in tmux
-
-# Load special config in wsl
-if grep -q Microsoft /proc/version; then
-# https://github.com/Microsoft/BashOnWindows/issues/2148
-# Bash doesn't set PATH correctly so we need to set here
-# because powerline statusline for tmux needs to execute
-# "powerline-config" which located in "~/.local/bin"
-    if [ -d "$HOME/.local/bin" ] ; then
-        export PATH="$HOME/.local/bin:$PATH"
-    fi
-    export DISPLAY=127.0.0.1:0.0
-fi
-
 export FZF_DEFAULT_OPTS='--height 50% --reverse --border'
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"

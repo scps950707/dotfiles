@@ -1,10 +1,3 @@
-# https://github.com/Microsoft/BashOnWindows/issues/1887
-if grep -q Microsoft /proc/version; then
-    # wsl serve dir as OTHER_WRITABLE, use cyan and bold
-    export LS_COLORS=$LS_COLORS"ow=01;34:"
-    unsetopt BG_NICE
-fi
-
 if [[ ! -d ~/.zplug ]]; then
     curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 fi
