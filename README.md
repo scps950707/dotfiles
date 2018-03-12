@@ -55,6 +55,7 @@
 |magit|vim -c MagitOnly|
 |styleall|astyle --suffix=none `find . -regex ".*\.[ch]p*p*$"`|
 |findn|find . -name|
+|pathlist="echo $PATH | sed |s/:/\n/g|"
 
 ## Astyle Details
 

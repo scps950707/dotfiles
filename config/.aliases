@@ -2,7 +2,7 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-03-27 00:00
-# Last Modified:  2017-12-06 13:58
+# Last Modified:  2018-03-12 09:41
 # Filename:       .aliases
 # ==========================================================================
 alias ll='ls -lFh' #size,show type,human readable
@@ -25,3 +25,4 @@ alias listhook='(cd `git rev-parse --show-toplevel` && tree `git config core.hoo
 alias magit='vim -c MagitOnly'
 alias styleall='astyle --suffix=none `find . -regex ".*\.[ch]p*p*$"`'
 alias findn='find . -name'
+alias pathlist="echo $PATH | sed 's/:/\n/g'"
