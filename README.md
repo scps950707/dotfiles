@@ -44,6 +44,7 @@
 |mcda|make clean dep all|
 |mc|make clean|
 |mca|make clean all|
+|mcm|make clean && make|
 |..|cd ..|
 |n|nautilus|
 |g|git|
