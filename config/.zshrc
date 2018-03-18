@@ -25,7 +25,7 @@ zplug "zsh-users/zsh-autosuggestions", defer:2
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable rbenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
-zplug "junegunn/fzf", hook-build:"./install --all"
+zplug "junegunn/fzf", hook-build:"./install --no-bash --no-zsh"
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
 
 # Install plugins if there are plugins that have not been installed
