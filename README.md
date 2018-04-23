@@ -3,11 +3,12 @@
 ## Structure
 ```
 .
+|-- README.md
 |-- backup
 |   |-- .bash_logout
 |   |-- .bashrc
-|   |-- compiz.profile
-|   `-- .profile
+|   |-- .profile
+|   `-- compiz.profile
 |-- config
 |   |-- .aliases
 |   |-- .astylerc
@@ -28,7 +29,6 @@
 |       |-- readme.hook
 |       `-- timestamp.hook
 |-- makefile
-|-- README.md
 `-- readme.sh
 ```
 
@@ -57,6 +57,7 @@
 |styleall|astyle --suffix=none `find . -regex ".*\.[ch]p*p*$"`|
 |findn|find . -name|
 |pathlist|echo $PATH | sed "s/:/\n/g"|
+|langeng|export LANG="en_US" && export LANGUAGE="en_US:en"|
 
 ## Astyle Details
 

@@ -2,7 +2,7 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-03-27 00:00
-# Last Modified:  2018-03-26 01:57
+# Last Modified:  2018-04-23 15:07
 # Filename:       .aliases
 # ==========================================================================
 alias ll='ls -lFh' #size,show type,human readable
@@ -27,3 +27,4 @@ alias magit='vim -c MagitOnly'
 alias styleall='astyle --suffix=none `find . -regex ".*\.[ch]p*p*$"`'
 alias findn='find . -name'
 alias pathlist='echo $PATH | sed "s/:/\n/g"'
+alias langeng='export LANG="en_US" && export LANGUAGE="en_US:en"'
