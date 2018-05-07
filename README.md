@@ -3,12 +3,11 @@
 ## Structure
 ```
 .
-|-- README.md
 |-- backup
 |   |-- .bash_logout
 |   |-- .bashrc
-|   |-- .profile
-|   `-- compiz.profile
+|   |-- compiz.profile
+|   `-- .profile
 |-- config
 |   |-- .aliases
 |   |-- .astylerc
@@ -29,6 +28,7 @@
 |       |-- readme.hook
 |       `-- timestamp.hook
 |-- makefile
+|-- README.md
 `-- readme.sh
 ```
 
