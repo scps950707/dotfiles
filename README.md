@@ -6,7 +6,6 @@
 |-- backup
 |   |-- .bash_logout
 |   |-- .bashrc
-|   |-- compiz.profile
 |   `-- .profile
 |-- config
 |   |-- .aliases

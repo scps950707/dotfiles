@@ -4,6 +4,10 @@ export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat 
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 #####
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 # tmux
 if command -v tmux>/dev/null 2>&1; then
