@@ -14,6 +14,24 @@
 |   |-- .bash_prompt
 |   |-- .bashrc
 |   |-- .dircolors
+|   |-- dircolors-solarized
+|   |   |-- dircolors.256dark
+|   |   |-- dircolors.ansi-dark
+|   |   |-- dircolors.ansi-light
+|   |   |-- dircolors.ansi-universal
+|   |   |-- img
+|   |   |   |-- dircolors.256dark.png
+|   |   |   |-- screen-dircolors-in-iTerm2-solarized_dark.png
+|   |   |   |-- screen-dircolors-in-iTerm2-solarized_light.png
+|   |   |   |-- screen-dircolors-in-iTerm-dark.png
+|   |   |   |-- screen-dircolors-in-iTerm-dark-with-coreutils-installed.png
+|   |   |   |-- screen-dircolors-in-iTerm-light.png
+|   |   |   |-- screen-dircolors-in-PuTTY-dark_default.png
+|   |   |   |-- screen-dircolors-in-PuTTY-light_system.png
+|   |   |   `-- screen-iTerm2-bold-options.png
+|   |   |-- Makefile
+|   |   |-- README.md
+|   |   `-- test-directory.tar.bz2
 |   |-- .functions
 |   |-- .gitattributes
 |   |-- .gitconfig
@@ -21,6 +39,7 @@
 |   |-- .tmux.conf
 |   |-- .ycm_extra_conf.py
 |   `-- .zshrc
+|-- .gitmodules
 |-- hook
 |   |-- pre-commit
 |   `-- pre-commit.d
