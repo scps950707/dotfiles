@@ -13,7 +13,6 @@
 |   |-- .bash_profile
 |   |-- .bash_prompt
 |   |-- .bashrc
-|   |-- .dircolors
 |   |-- dircolors-solarized
 |   |   |-- dircolors.256dark
 |   |   |-- dircolors.ansi-dark
@@ -38,6 +37,7 @@
 |   |-- .gitignore
 |   |-- .tmux.conf
 |   |-- .ycm_extra_conf.py
+|   |-- .zpreztorc
 |   `-- .zshrc
 |-- .gitmodules
 |-- hook
